@@ -3,50 +3,151 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Neon Cüzdan - Gizlilik Politikası</title>
+  <title>Neon Cüzdan · Gizlilik Politikası</title>
   <style>
-    body { font-family: Arial, sans-serif; background:#0b0b0b; color:#eaeaea; margin:0; }
-    .wrap { max-width: 900px; margin: 40px auto; padding: 24px; }
-    h1 { color:#39FF14; }
-    h2 { margin-top:24px; color:#cfcfcf; }
-    a { color:#39FF14; }
-    .muted { color:#9a9a9a; }
+    :root{
+      --bg:#0b0d10;
+      --bg-2:#0f1318;
+      --card:#11161d;
+      --line:#1b2530;
+      --text:#e6edf3;
+      --muted:#9aa7b3;
+      --accent:#39ff14;
+      --accent-2:#19c7a1;
+      --glow:0 0 22px rgba(57,255,20,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;}
+    .noise{
+      position:fixed;inset:0;pointer-events:none;opacity:.04;
+      background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2'/></filter><rect width='120' height='120' filter='url(%23n)'/></svg>");
+      mix-blend-mode:screen;
+    }
+    .hero{
+      background:
+        radial-gradient(1200px 600px at 10% -10%, rgba(57,255,20,.15), transparent 60%),
+        radial-gradient(900px 500px at 90% 0%, rgba(25,199,161,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg-2), var(--bg));
+      border-bottom:1px solid var(--line);
+      padding:56px 20px 40px;
+      text-align:center;
+    }
+    .badge{
+      display:inline-block;
+      padding:6px 12px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:.2px;
+      background:#0e1217;
+    }
+    h1{
+      margin:14px 0 8px;
+      font-size:32px;
+      letter-spacing:.3px;
+      color:var(--accent);
+      text-shadow:var(--glow);
+    }
+    .subtitle{color:var(--muted);font-size:14px}
+    .wrap{max-width:980px;margin:0 auto;padding:28px 20px 60px}
+    .grid{display:grid;grid-template-columns:1fr;gap:14px}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:18px 18px 16px;
+      box-shadow:0 10px 30px rgba(0,0,0,.2);
+    }
+    .card h2{
+      margin:0 0 8px;
+      font-size:16px;
+      color:#cfe8d0;
+      letter-spacing:.2px;
+    }
+    .card p{margin:0;color:var(--text);line-height:1.55}
+    .muted{color:var(--muted)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .footer{
+      border-top:1px solid var(--line);
+      padding:22px 20px 40px;
+      text-align:center;
+      color:var(--muted);
+      font-size:12px;
+    }
+    @media(min-width:860px){
+      .grid{grid-template-columns:1fr 1fr}
+      .card.span2{grid-column:span 2}
+    }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Gizlilik Politikası (Neon Cüzdan)</h1>
-    <p class="muted">Son Güncelleme: 29.12.2025</p>
+  <div class="noise"></div>
 
-    <p>Neon Cüzdan (“Uygulama”), kullanıcı gizliliğine önem verir. Bu politika, Uygulama’yı kullanırken hangi verilerin işlendiğini açıklar.</p>
+  <section class="hero">
+    <div class="badge">Neon Cüzdan · Gizlilik Politikası</div>
+    <h1>Güvenli. Şeffaf. Yerel.</h1>
+    <div class="subtitle">Son Güncelleme: 29.12.2025</div>
+  </section>
 
-    <h2>1) Toplanan Veriler</h2>
-    <p>Uygulama, yalnızca kullanıcının girdiği finansal kayıtları (tutar, not, kategori, tarih) cihazda yerel olarak saklar. Uygulama, kullanıcıdan zorunlu kimlik bilgisi veya kişisel veri talep etmez.</p>
+  <main class="wrap">
+    <div class="grid">
+      <div class="card span2">
+        <h2>Özet</h2>
+        <p>Neon Cüzdan, kullanıcı gizliliğini önceliklendiren bir finans uygulamasıdır. Verileriniz cihazınızda saklanır, harici sunuculara gönderilmez.</p>
+      </div>
 
-    <h2>2) Reklamlar</h2>
-    <p>Uygulama, Google AdMob reklam hizmetini kullanır. AdMob, cihaz kimlikleri ve reklam çerezleri gibi verileri toplayabilir. Bu veriler Google’ın gizlilik politikasına tabidir.</p>
-    <p><a href="https://policies.google.com/privacy" target="_blank">Google Gizlilik Politikası</a></p>
+      <div class="card">
+        <h2>1) Toplanan Veriler</h2>
+        <p>Yalnızca sizin girdiğiniz finansal kayıtlar (tutar, not, kategori, tarih) cihazda saklanır. Uygulama zorunlu kişisel veri toplamaz.</p>
+      </div>
 
-    <h2>3) Verilerin Saklanması</h2>
-    <p>Kullanıcı verileri yalnızca cihaz üzerinde saklanır. Uygulama, verileri sunucularına göndermez.</p>
+      <div class="card">
+        <h2>2) Reklamlar</h2>
+        <p>Google AdMob kullanılır. AdMob, reklam gösterimi için cihaz kimlikleri ve çerezler gibi verileri işleyebilir.</p>
+        <p class="muted">Google Gizlilik Politikası: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+      </div>
 
-    <h2>4) Yedekleme</h2>
-    <p>Uygulama isteğe bağlı olarak JSON/CSV yedekleme sağlar. Bu yedekler yalnızca kullanıcının seçtiği konumda saklanır.</p>
+      <div class="card">
+        <h2>3) Verilerin Saklanması</h2>
+        <p>Veriler yalnızca cihaz üzerinde saklanır. Uygulama verileri kendi sunucularına göndermez.</p>
+      </div>
 
-    <h2>5) Üçüncü Taraf Hizmetler</h2>
-    <p>Uygulama yalnızca reklam için Google AdMob kullanır.</p>
+      <div class="card">
+        <h2>4) Yedekleme</h2>
+        <p>İsteğe bağlı JSON/CSV yedekleme sunulur. Yedekler kullanıcı tarafından seçilen konumda tutulur.</p>
+      </div>
 
-    <h2>6) Güvenlik</h2>
-    <p>Verilerin güvenliğini sağlamak için makul teknik önlemler alınır. Ancak cihaz güvenliği kullanıcı sorumluluğundadır.</p>
+      <div class="card">
+        <h2>5) Üçüncü Taraf Hizmetler</h2>
+        <p>Uygulama yalnızca reklam amacıyla Google AdMob kullanır.</p>
+      </div>
 
-    <h2>7) Çocukların Gizliliği</h2>
-    <p>Uygulama 13 yaş altına özel olarak tasarlanmamıştır.</p>
+      <div class="card">
+        <h2>6) Güvenlik</h2>
+        <p>Makul teknik önlemler alınır. Cihaz güvenliği kullanıcı sorumluluğundadır.</p>
+      </div>
 
-    <h2>8) Değişiklikler</h2>
-    <p>Bu politika zaman zaman güncellenebilir. Güncellemeler bu sayfada yayınlanır.</p>
+      <div class="card">
+        <h2>7) Çocukların Gizliliği</h2>
+        <p>Uygulama 13 yaş altına özel tasarlanmamıştır.</p>
+      </div>
 
-    <h2>9) İletişim</h2>
-    <p>ramazan29boz@gmail.com</p>
+      <div class="card">
+        <h2>8) Değişiklikler</h2>
+        <p>Bu politika zaman zaman güncellenebilir. Güncel sürüm bu sayfada yayınlanır.</p>
+      </div>
+
+      <div class="card span2">
+        <h2>9) İletişim</h2>
+        <p>Her türlü soru için: <a href="mailto:ramazan29boz@gmail.com">ramazan29boz@gmail.com</a></p>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer">
+    © 2025 Neon Cüzdan · Tüm hakları saklıdır.
   </div>
 </body>
 </html>
